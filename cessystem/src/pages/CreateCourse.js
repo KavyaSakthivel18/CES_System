@@ -21,33 +21,40 @@ function CreateCourse() {
 
   };
 
-  const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
 
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
+  try {
 
-      await createCourse(course);
+    const payload = {
+      ...course,
+      totalSeats: Number(course.totalSeats),
+      availableSeats: Number(course.totalSeats), // backend expects this
+      status: "PLANNED" // default course status
+    };
 
-      alert("Course created successfully");
+    await createCourse(payload);
 
-      setCourse({
-        courseCode: "",
-        title: "",
-        description: "",
-        totalSeats: "",
-        startDate: "",
-        endDate: ""
-      });
+    alert("Course created successfully");
 
-    } catch (error) {
+    setCourse({
+      courseCode: "",
+      title: "",
+      description: "",
+      totalSeats: "",
+      startDate: "",
+      endDate: ""
+    });
 
-      console.error(error);
-      alert("Error creating course");
+  } catch (error) {
 
-    }
+    console.error(error);
+    alert("Error creating course");
 
-  };
+  }
+
+};
 
   return (
 

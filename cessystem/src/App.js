@@ -1,11 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css';
-import Signup from './pages/Signup';
-import EnrollmentsPage from './pages/EnrollmentsPage';
-import CreateCourse from './pages/CreateCourse';
+
+import Signup from "./pages/Signup";
+import EnrollmentsPage from "./pages/EnrollmentsPage";
+import CreateCourse from "./pages/CreateCourse";
+
+import AdminRoute from "./components/AdminRoute";
 
 function App() {
+
   return (
+
     <BrowserRouter>
 
       <Routes>
@@ -14,11 +18,20 @@ function App() {
 
         <Route path="/enrollments" element={<EnrollmentsPage />} />
 
-        <Route path="/create-course" element={<CreateCourse />} />
+        {/* ADMIN ONLY ROUTE */}
+        <Route
+          path="/create-course"
+          element={
+            <AdminRoute>
+              <CreateCourse />
+            </AdminRoute>
+          }
+        />
 
       </Routes>
 
     </BrowserRouter>
+
   );
 }
 

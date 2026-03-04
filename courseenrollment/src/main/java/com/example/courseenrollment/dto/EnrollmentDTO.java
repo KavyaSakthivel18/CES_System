@@ -1,4 +1,4 @@
-package main.java.com.example.courseenrollment.dto;
+package com.example.courseenrollment.dto;
 
 import com.example.courseenrollment.enums.EnrollmentStatus;
 import jakarta.validation.constraints.NotNull;

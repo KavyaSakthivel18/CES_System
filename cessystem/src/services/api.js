@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:8080/api"
+  baseURL: "https://ces-system.onrender.com/api"
 });
 //fetching APi's from backend
 export const createUser = (data) => API.post("/users", data);

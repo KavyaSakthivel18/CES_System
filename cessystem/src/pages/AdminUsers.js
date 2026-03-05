@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getUsers, createUser, updateUser, deleteUser } from "../services/api";
-
+// Admin can create a new user here and can manage all the works here
 function AdminUsers() {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getCoursesByStatus, enrollCourse } from "../services/api";
-
+// COurse were listed here
 function CourseCatalog() {
     const navigate = useNavigate();
     const userId = localStorage.getItem("userId");

@@ -10,7 +10,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import AdminUsers from "./pages/AdminUsers";
 import AdminCourses from "./pages/AdminCourses";
 import AdminEnrollments from "./pages/AdminEnrollments";
-
+//App's main component with routing setup for different pages and admin routes
 function App() {
   return (
     <BrowserRouter>

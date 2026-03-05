@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllEnrollments, cancelEnrollment, enrollCourse, getUsers, getCoursesByStatus, countStudentsInCourse } from "../services/api";
-
+// Admin enrollment page
 function AdminEnrollments() {
     const [enrollments, setEnrollments] = useState([]);
     const [loading, setLoading] = useState(true);

@@ -3,7 +3,7 @@ import axios from "axios";
 const API = axios.create({
   baseURL: "http://localhost:8080/api"
 });
-
+//fetching APi's from backend
 export const createUser = (data) => API.post("/users", data);
 export const getUsers = () => API.get("/users");
 export const getUserById = (id) => API.get(`/users/${id}`);

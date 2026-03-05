@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getCoursesByStatus, enrollCourse } from "../services/api";
-
+//in this home page course were listed and enrolling willl be done here
 function HomePage() {
     const navigate = useNavigate();
     const userName = localStorage.getItem("userName");

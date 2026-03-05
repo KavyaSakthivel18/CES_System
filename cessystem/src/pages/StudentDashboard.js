@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getStudentEnrollments, cancelEnrollment } from "../services/api";
-
+// Students enrollment page
 function StudentDashboard() {
     const userId = localStorage.getItem("userId");
     const userName = localStorage.getItem("userName");

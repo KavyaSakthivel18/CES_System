@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getCourses, createCourse, updateCourse, deleteCourse, openCourse, closeCourse, completeCourse, countStudentsInCourse } from "../services/api";
-
+//admin manages vourse here
 function AdminCourses() {
     const [courses, setCourses] = useState([]);
     const [loading, setLoading] = useState(true);

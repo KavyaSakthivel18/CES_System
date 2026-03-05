@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { createUser } from "../services/api";
-
+// sign up page
 function SignupPage() {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({ name: "", password: "" });

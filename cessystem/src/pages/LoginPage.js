@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { getUsers } from "../services/api";
-
+//Login page
 function LoginPage() {
     const navigate = useNavigate();
     const [name, setName] = useState("");

@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-
+// Navbar component that displays navigation links based on user role and handles logout functionality
 function Navbar() {
     const location = useLocation();
     const navigate = useNavigate();

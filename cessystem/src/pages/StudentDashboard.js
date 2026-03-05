@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { getStudentEnrollments, cancelEnrollment } from "../services/api";
 // Students enrollment page
 function StudentDashboard() {
@@ -9,20 +9,20 @@ function StudentDashboard() {
     const [cancellingId, setCancellingId] = useState(null);
     const [toast, setToast] = useState(null);
 
-    useEffect(() => {
-        fetchEnrollments();
-    }, []);
-
-    const fetchEnrollments = async () => {
+    const fetchEnrollments = useCallback(async () => {
         try {
-            const response = await getStudentEnrollments(userId);
-            setEnrollments(response.data);
+          const response = await getStudentEnrollments(userId);
+          setEnrollments(response.data);
         } catch (err) {
-            console.error(err);
+          console.error(err);
         } finally {
-            setLoading(false);
+          setLoading(false);
         }
-    };
+      }, [userId]);
+    
+      useEffect(() => {
+        fetchEnrollments();
+      }, [fetchEnrollments]);
 
     const handleCancel = async (id) => {
         if (!window.confirm("Are you sure you want to cancel this enrollment?")) return;

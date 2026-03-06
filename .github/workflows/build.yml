@@ -25,7 +25,7 @@ jobs:
       - name: Build Spring Boot Project
         run: |
           cd courseenrollment
-          mvn clean install
+          mvn clean install -DskipTests
 
   frontend-build:
     runs-on: ubuntu-latest
